@@ -4,6 +4,7 @@
 
 <details>
 <summary>Описание на русском</summary>
+---
 
 Удобное расширение для браузеров на базе Chromium, позволяющее парсить данные с российских онлайн-магазинов.  
 **Работает в Google Chrome, Yandex Browser, Brave и других.**
@@ -46,6 +47,7 @@
 
 <details>
 <summary>Description on english</summary>
+---
 
 A convenient Chromium-based browser extension for parsing data from Russian online marketplaces.  
 **Works in Google Chrome, Yandex Browser, Brave, and others.**
