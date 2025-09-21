@@ -1,7 +1,7 @@
 # RuPriceParser
 ## ru-online-markets-parser-chromium-extension
 
-[![License: MIT](https://opensource.org/license/mit)]
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 <details>
 <summary>Описание на русском</summary>
