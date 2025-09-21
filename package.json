@@ -1,0 +1,32 @@
+{
+  "name": "ru-online-markets-parser-chromium-extension",
+  "version": "1.0.0",
+  "description": "[![License: ---](---)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx esbuild --bundle --platform=browser --outbase=src --outdir=build --loader:.ts=ts src/content/parser.ts src/popup/script.ts",
+    "watch": "esbuild --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Warghkhan/ru-online-markets-parser-chromium-extension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Warghkhan/ru-online-markets-parser-chromium-extension/issues"
+  },
+  "homepage": "https://github.com/Warghkhan/ru-online-markets-parser-chromium-extension#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.1.11",
+    "esbuild": "^0.25.9",
+    "esbuild-plugin-typescript": "^2.0.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "export-from-json": "^1.7.4"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "RuPriceParser",
+  "version": "0.1.0",
+  "description": "Парсинг данных с онлайн-магазинов в XLSX, TXT, JSON",
+  "icons": {
+    "128": "src/assets/icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "build/popup/index.html",
+    "default_title": "RuPriceParser"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/parser.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab", "scripting", "storage", "webNavigation"],
+  "host_permissions": [
+    "*://ozon.ru/*",
+    "*://www.ozon.ru/*",
+    "*://wildberries.ru/*",
+    "*://www.wildberries.ru/*",
+    "*://market.yandex.ru/*",
+    "*://www.market.yandex.ru/*",
+    "*://mvideo.ru/*",
+    "*://www.mvideo.ru/*",
+    "*://citilink.ru/*",
+    "*://www.citilink.ru/*",
+    "*://dns-shop.ru/*",
+    "*://www.dns-shop.ru/*"
+  ]
+}

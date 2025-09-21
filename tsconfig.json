@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["DOM", "ES2020"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "moduleResolution": "Node",
+    "allowJs": true
+  },
+  "include": ["src/**/*", "types/export-from-json.d.ts"]
+}

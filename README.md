@@ -1,26 +1,27 @@
-# ru-online-markets-parser-chromium-extension
+# RuPriceParser
+## ru-online-markets-parser-chromium-extension
 
-[![License: ---](---)
+[![License: MIT](https://opensource.org/license/mit)]
 
 <details>
 <summary>Описание на русском</summary>
 ---
 
 Удобное расширение для браузеров на базе Chromium, позволяющее парсить данные с российских онлайн-магазинов.  
-**Работает в Google Chrome, Yandex Browser, Brave и других.**
+**Работает в Google Chrome, Yandex Browser, Brave и других Chromium-based браузерах.**
 
 ---
 
 ## 📌 Описание
 
-**ru-online-markets-parser-chromium-extension** — это расширение для браузера, разработанное для автоматического извлечения информации о товарах с популярных российских маркетплейсов.
+**RuPriceParser** — это расширение для браузера, разработанное для автоматического извлечения информации о товарах с популярных российских маркетплейсов.
 
 Просто откройте страницу товара — и расширение соберёт нужные данные:  
 ✅ Название  
 ✅ Цена  
 ✅ Другие параметры
 
-Данные можно быстро экспортировать в **CSV** или **JSON** для дальнейшего анализа.
+Данные можно быстро экспортировать в **JSON** / **XLS** / **TXT** для дальнейшего анализа.
 
 ---
 
@@ -50,20 +51,20 @@
 ---
 
 A convenient Chromium-based browser extension for parsing data from Russian online marketplaces.  
-**Works in Google Chrome, Yandex Browser, Brave, and others.**
+**Works in Google Chrome, Yandex Browser, Brave, and others Chromium-based browsers.**
 
 ---
 
 ## 📌 Description
 
-**ru-online-markets-parser-chromium-extension** is a browser extension designed to automatically extract product information from popular Russian e-commerce platforms.
+**RuPriceParser** is a browser extension designed to automatically extract product information from popular Russian e-commerce platforms.
 
 Just open a product page — the extension will collect key details:  
 ✅ Title  
 ✅ Price  
 ✅ Other parameters
 
-Easily export data to **CSV** or **JSON** for further analysis.
+Easily export data to **JSON** / **XLS** / **TXT** for further analysis.
 
 ---
 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RuPriceParser</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        id="extension-icon"
+        src="../assets/icons/icon128.png"
+        alt="RuPriceParser logo"
+      />
+      <h4 id="site-title">RuPriceParser</h4>
+    </div>
+    <div class="main">    
+      <div class="info-box">
+        <p><strong>Сайт не поддерживается для парсинга.</strong></p>
+        <p>Используйте расширение на одном из поддерживаемых маркетплейсов:</p>
+      </div>
+      <div class="site-list">
+        <button class="btn btn-site" data-url="https://ozon.ru">Ozon</button>
+        <button class="btn btn-site" data-url="https://wildberries.ru">Wildberries</button>
+        <button class="btn btn-site" data-url="https://market.yandex.ru">Яндекс.Маркет</button>
+        <button class="btn btn-site" data-url="https://mvideo.ru">М.Видео</button>
+        <button class="btn btn-site" data-url="https://citilink.ru">Ситилинк</button>
+        <button class="btn btn-site" data-url="https://www.dns-shop.ru/">DNS</button>
+      </div>
+      <button
+        class="btn btn-instruction"
+        data-url="https://dzen.ru/a/aNBVdOKOuBknKEpa"
+      >
+        Инструкция по использованию
+      </button>
+      <div class="export-buttons">
+        <button class="btn btn-export get-data-btn" disabled>
+          Получить данные
+        </button>
+        <div class="btn-export-list">
+          <button class="btn btn-export xlsx">Экспорт в XLS</button>
+          <button class="btn btn-export txt">Экспорт в TXT</button>
+          <button class="btn btn-export json">Экспорт в JSON</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-buttons">
+        <button
+          class="btn footer-button footer-button-feedback"
+          data-url="https://forms.yandex.ru/cloud/68cc482fe010db5e137a3662"
+        >
+          Обратная связь
+        </button>
+        <button
+          class="btn footer-button footer-button-donate"
+          data-url="https://yoomoney.ru/to/4100116908990375"
+        >
+          Поддержать автора
+        </button>
+      </div>
+      Zed Damasky © 2025 RuPriceParser
+    </div>
+  </body>
+  <script src="../assets/js/export-from-json.min.js"></script>
+  <script src="script.js"></script>
+</html>

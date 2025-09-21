@@ -1,0 +1,299 @@
+/*  ПЕРЕМЕННЫЕ  */
+:root {
+  --popup-width: 420px;
+  --popup-height: 600px;
+
+  /* Цвета */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --accent-color: #0d6efd;
+  --success-color: #198754;
+  --info-color: #0dcaf0;
+  --warning-color: #ffc107;
+  --dark-color: #212529;
+
+  /* Тени и радиусы */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+/*  ТЁМНАЯ ТЕМА  */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --border-color: #333;
+    --accent-color: #6ea6ff;
+    --success-color: #4ade80;
+    --info-color: #6ee7b7;
+    --warning-color: #ffd166;
+    --dark-color: #f8f9fa;
+  }
+}
+
+/*  БАЗОВЫЕ НАСТРОЙКИ  */
+body {
+  width: var(--popup-width);
+  height: var(--popup-height);
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+/*  ЗАГОЛОВОК  */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  gap: 10px;
+}
+
+.header img {
+  width: 48px;
+  height: 48px;
+}
+
+.header h4 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/*  ОСНОВНОЙ КОНТЕНТ  */
+.main {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-box {
+  padding: 0.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.info-box strong {
+  color: var(--text-primary);
+}
+
+/*  КНОПКИ  */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-bottom: 0.5rem;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-instruction {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-instruction:hover {
+  background-color: #0b5ed7;
+}
+
+.btn-export {
+  font-weight: 500;
+}
+
+.btn-export.xlsx {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-export.txt {
+  background-color: var(--warning-color);
+  color: #121212;
+}
+
+.btn-export.json {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.btn-export:hover {
+  opacity: 0.9;
+}
+
+/* === СКРЫТИЕ ЭЛЕМЕНТОВ === */
+/* По умолчанию скрываем все динамические блоки */
+.info-box,
+.export-buttons,
+.site-list {
+  display: none;
+}
+
+/* Показываем только при необходимости */
+body.active .export-buttons {
+  display: block;
+}
+
+body:not(.active) .info-box,
+body:not(.active) .site-list {
+  display: block;
+}
+
+/* === КНОПКИ МАГАЗИНОВ — ВСЕГДА В 2 КОЛОНКИ === */
+.site-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+/* === СТИЛИ КНОПОК МАГАЗИНОВ — ЕДИНСТВЕННОЕ ОПРЕДЕЛЕНИЕ === */
+.btn-site {
+  /* Настройки по умолчанию — будут переопределяться JS */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.8rem 0.75rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.2s, opacity 0.2s;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-site:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0.95;
+}
+
+/* === ДИНАМИЧЕСКИЕ ЦВЕТА — ПРИМЕНЯЮТСЯ JS ЧЕРЕЗ КЛАССЫ === */
+/* Эти классы добавляются JS-ом на основе текста кнопки */
+.btn-site.ozon {
+  background-color: #005BFF !important;
+  color: #FFFFFF !important;
+}
+
+.btn-site.wildberries {
+  background-color: #7D29EE !important;
+  color: #FFFFFF !important;
+}
+
+.btn-site.yandex-market {
+  background-color: #FFC107 !important;
+  color: #000000 !important;
+}
+
+.btn-site.mvideo {
+  background-color: #E63946 !important;
+  color: #FFFFFF !important;
+}
+
+.btn-site.dns-shop {
+  background-color: #ff5200 !important;
+  color: #FFFFFF !important;
+}
+
+.btn-site.citilink {
+  background-color: #FFFFFF !important;
+  color: #ff5200!important;
+  border: solid 5px #ff5200 !important;
+}
+
+/* === СТИЛЬ СЧЕТЧИКА ТОВАРОВ === */
+.product-count-info {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.product-count-info strong {
+  color: var(--text-primary);
+}
+
+/*  ФУТЕР  */
+.footer {
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-button-donate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #157146;
+}
+
+.footer-button-feedback:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #e4ac04;
+}
+
+.footer-button-feedback {
+  background-color: var(--warning-color);
+  color:black;
+}
+
+.footer-button-donate {
+  background-color: var(--success-color);
+  color:white;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
