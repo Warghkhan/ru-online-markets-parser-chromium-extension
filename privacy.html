@@ -1,61 +1,200 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Политика конфиденциальности RuPriceParser</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
-      line-height: 1.6;
-      color: #333;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #7f8c8d;
-      border-top: 1px solid #eee;
-      padding-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Политика конфиденциальности RuPriceParser</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Политика конфиденциальности RuPriceParser</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      footer {
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: #7f8c8d;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+      }
+      .lang-switch {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        gap: 10px;
+      }
+      .lang-switch button {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.9em;
+        transition: all 0.2s;
+      }
+      .lang-switch button.active {
+        background-color: #3498db;
+        color: white;
+      }
+      .lang-switch button:not(.active) {
+        background-color: #ecf0f1;
+        color: #555;
+      }
+      .lang-content {
+        display: none;
+      }
+      .lang-content.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lang-switch">
+      <button id="lang-ru" data-lang="ru">RU</button>
+      <button id="lang-en" data-lang="en">EN</button>
+    </div>
 
-  <p><strong>RuPriceParser</strong> — это браузерное расширение, работающее исключительно локально в вашем браузере.</p>
+    <!-- RU CONTENT -->
+    <div id="content-ru" class="lang-content active">
+      <h1>Политика конфиденциальности RuPriceParser</h1>
 
-  <h2>Что мы НЕ собираем:</h2>
-  <ul>
-    <li>Никакие личные данные (имя, email, телефон)</li>
-    <li>Никакие данные о ваших посещениях вне страниц маркетплейсов</li>
-    <li>Никакие cookies, трекеры или идентификаторы устройств</li>
-    <li>Никакие внешние серверы — мы не отправляем ваши данные никуда</li>
-  </ul>
+      <p>
+        <strong>RuPriceParser</strong> — это браузерное расширение, работающее
+        исключительно локально в вашем браузере.
+      </p>
 
-  <h2>Что мы делаем:</h2>
-  <ul>
-    <li>Парсим данные <strong>только</strong> с открытых вами страниц Wildberries, Ozon, М.Видео и других поддерживаемых сайтов</li>
-    <li>Временно сохраняем собранные товары в <code>localStorage</code> вашего браузера до экспорта</li>
-    <li>При экспорте в JSON/XLSX/TXT — данные остаются только на вашем устройстве</li>
-    <li>Никакой скрытой аналитики, рекламы, внешних скриптов или отслеживания</li>
-  </ul>
+      <h2>Что мы НЕ собираем:</h2>
+      <ul>
+        <li>Никакие личные данные (имя, email, телефон)</li>
+        <li>Никакие данные о ваших посещениях вне страниц маркетплейсов</li>
+        <li>Никакие cookies, трекеры или идентификаторы устройств</li>
+        <li>Никакие внешние серверы — мы не отправляем ваши данные никуда</li>
+      </ul>
 
-  <h2>Как удалить данные:</h2>
-  <p>Чтобы удалить все данные, просто:</p>
-  <ol>
-    <li>Откройте <code>chrome://extensions</code></li>
-    <li>Найдите RuPriceParser</li>
-    <li>Нажмите «Удалить» — все данные в <code>localStorage</code> будут автоматически очищены</li>
-  </ol>
+      <h2>Что мы делаем:</h2>
+      <ul>
+        <li>
+          Парсим данные <strong>только</strong> с открытых вами страниц
+          Wildberries, Ozon, М.Видео и других поддерживаемых сайтов
+        </li>
+        <li>
+          Временно сохраняем собранные товары в <code>localStorage</code> вашего
+          браузера до экспорта
+        </li>
+        <li>
+          При экспорте в JSON/XLSX/TXT — данные остаются только на вашем
+          устройстве
+        </li>
+        <li>
+          Никакой скрытой аналитики, рекламы, внешних скриптов или отслеживания
+        </li>
+      </ul>
 
-  <footer>
-    © 2025 RuPriceParser. Расширение не является официальным продуктом маркетплейсов.
-  </footer>
-</body>
+      <h2>Как удалить данные:</h2>
+      <p>Чтобы удалить все данные, просто:</p>
+      <ol>
+        <li>Откройте <code>chrome://extensions</code></li>
+        <li>Найдите RuPriceParser</li>
+        <li>
+          Нажмите «Удалить» — все данные в <code>localStorage</code> будут
+          автоматически очищены
+        </li>
+      </ol>
+
+      <footer>
+        © 2025 RuPriceParser. Расширение не является официальным продуктом
+        маркетплейсов.
+      </footer>
+    </div>
+
+    <!-- EN CONTENT -->
+    <div id="content-en" class="lang-content">
+      <h1>Privacy Policy of RuPriceParser</h1>
+
+      <p>
+        <strong>RuPriceParser</strong> is a browser extension that works
+        entirely locally in your browser.
+      </p>
+
+      <h2>What we DO NOT collect:</h2>
+      <ul>
+        <li>Any personal data (name, email, phone)</li>
+        <li>Any data about your browsing outside marketplace pages</li>
+        <li>Cookies, trackers, or device identifiers</li>
+        <li>Any external servers — we do not send your data anywhere</li>
+      </ul>
+
+      <h2>What we DO:</h2>
+      <ul>
+        <li>
+          Scrape data <strong>only</strong> from the product pages of
+          Wildberries, Ozon, M.Video and other supported marketplaces that you
+          visit
+        </li>
+        <li>
+          Temporarily store collected items in your browser’s
+          <code>localStorage</code> until export
+        </li>
+        <li>
+          When exporting to JSON/XLSX/TXT — all data remains only on your device
+        </li>
+        <li>No hidden analytics, ads, external scripts, or tracking</li>
+      </ul>
+
+      <h2>How to delete your data:</h2>
+      <p>To delete all data, simply:</p>
+      <ol>
+        <li>Open <code>chrome://extensions</code></li>
+        <li>Find RuPriceParser</li>
+        <li>
+          Click “Remove” — all data in <code>localStorage</code> will be
+          automatically cleared
+        </li>
+      </ol>
+
+      <footer>
+        © 2025 RuPriceParser. This extension is not an official product of any
+        marketplace.
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const langRu = document.getElementById("lang-ru");
+        const langEn = document.getElementById("lang-en");
+        const contentRu = document.getElementById("content-ru");
+        const contentEn = document.getElementById("content-en");
+
+        const savedLang = localStorage.getItem("privacyLang");
+        if (savedLang === "en") {
+          switchLanguage("en");
+        }
+
+        langRu.addEventListener("click", () => switchLanguage("ru"));
+        langEn.addEventListener("click", () => switchLanguage("en"));
+
+        function switchLanguage(lang) {
+          langRu.classList.remove("active");
+          langEn.classList.remove("active");
+          if (lang === "ru") {
+            langRu.classList.add("active");
+            contentRu.classList.add("active");
+            contentEn.classList.remove("active");
+          } else {
+            langEn.classList.add("active");
+            contentEn.classList.add("active");
+            contentRu.classList.remove("active");
+          }
+
+          localStorage.setItem("privacyLang", lang);
+        }
+      });
+    </script>
+  </body>
 </html>
