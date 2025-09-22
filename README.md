@@ -1,6 +1,7 @@
 # RuPriceParser
 ## ru-online-markets-parser-chromium-extension
 [![Privacy Policy](https://img.shields.io/badge/Privacy-Policy-blue?style=for-the-badge&logo=github&logoColor=white)](https://warghkhan.github.io/ru-online-markets-parser-chromium-extension/privacy.html)
+---
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 <details>
